@@ -11,6 +11,14 @@ html {
   box-sizing: inherit;
   }
 
+
+/*html, body, #map-canvas {
+height: 100%;
+margin: 0;
+padding: 0;
+}*/
+
+
 .full-canvas{
     width: 100%;
     margin: 5%;
@@ -55,7 +63,9 @@ html {
 /*    display: block;*/
     width: 600px;
     margin:0 auto;
+    height: 100%;
 }
+
 .map-text{
     margin: 5%;
 /*    display: block;*/
