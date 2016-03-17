@@ -1,0 +1,170 @@
+/*Source:; https://css-tricks.com/box-sizing/*/
+
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+  }
+
+.full-canvas{
+    width: 100%;
+    margin: 5%;
+    float: left;
+    box-sizing: border-box;
+}
+.left-section{
+    width: 25%;
+    display: inline-block;
+    float: left;
+}
+.right-section{
+    width: 65%;
+/*    float: left;*/
+    display: flex;
+    flex-direction:column;
+}
+
+.logo{
+    max-width: 90%;
+    height: auto;
+    display: block;
+    margin: 2%;
+}
+.text{
+    width:98%;
+    margin: 2%;
+    display: block;
+}
+
+.img-fountain{
+    max-width: 75%;
+    height: auto;
+    margin: 2%;
+}
+.img-descr{
+    width: 95%;
+    margin:2%;
+}
+
+#map_canvas{
+/*    display: block;*/
+    width: 600px;
+    margin:0 auto;
+}
+.map-text{
+    margin: 5%;
+/*    display: block;*/
+}
+
+body{
+    font-family: 'Open Sans', Arial, sans-serif;
+    color: #3E423A;
+    margin:0;
+}
+
+h1{
+    padding: 10px;
+    color: #3E8C84;
+    text-align: left;
+   }
+
+h2{
+    color: #3E8C84;
+    text-align: left;
+    font-family: Arial, sans-serif;
+}
+
+h3{
+    color: #3E8C84;
+    }
+
+.nav-bar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #3E423A;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 500;
+    }
+
+li {
+    float: left;
+    }
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #0F2D4;
+}
+
+.active {
+    background-color: #3E8C84;
+}
+
+.table{
+    width: 100%;
+    padding-top:8%;
+    width: 95%;
+    margin:0 auto;
+   /* overflow: auto;*/
+
+}
+
+/*alternative colored rows*/
+tr:nth-child(odd){
+    background-color: #F4F7D9;
+}
+
+tr:nth-child(even) {
+    background: #A4CFBE;
+}
+tbody tr{
+    opacity: 0.8;
+}
+
+table tbody, table thead
+{
+    display: block;
+}
+
+table tbody 
+{
+   overflow: auto;
+   height: 600px;
+}
+th:first-child{
+    width: 105px;
+    text-align: left;
+    background-color: #3E8C84;
+    color: white;
+}
+th:nth-child(2){
+    width: 510px;
+    text-align: left;
+    background-color: #3E8C84;
+    color: white;
+}
+th:last-child{
+    width: 120px;
+    text-align: left;
+    background-color: #3E8C84;
+    color: white;
+}
+
+.firstrow' th {
+    background-color: 194759;
+}
