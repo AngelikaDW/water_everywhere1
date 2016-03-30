@@ -93,6 +93,10 @@ h3{
     color: #3E8C84;
     }
 
+.right-section a:visited{
+    color: #3E8C84;
+}
+
 .nav-bar ul {
     list-style-type: none;
     margin: 0;
