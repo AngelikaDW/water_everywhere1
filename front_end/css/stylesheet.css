@@ -92,7 +92,10 @@ h2{
 h3{
     color: #3E8C84;
     }
-
+.right-section a{
+    text: none;
+    color: #3E8C84;
+}
 .right-section a:visited{
     color: #3E8C84;
 }
