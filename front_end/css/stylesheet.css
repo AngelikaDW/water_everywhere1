@@ -94,6 +94,11 @@ h2{
 h3{
     color: #3E8C84;
     }
+
+h4{
+    margin-bottom: 0;
+    margin-top: 0;
+}
 .right-section a{
     text: none;
     color: #3E8C84;
