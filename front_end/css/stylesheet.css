@@ -46,7 +46,9 @@ padding: 0;
 .text{
     width:98%;
     margin: 2%;
-    display: block;
+    display: flex;
+    flex-direction:column;
+    /*display: inline-block;*/
 }
 
 .img-fountain{
