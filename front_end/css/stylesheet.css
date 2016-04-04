@@ -100,11 +100,12 @@ h4{
     margin-top: 0;
 }
 .right-section a{
-    text: none;
+    text-decoration: none;
     color: #3E8C84;
 }
 .right-section a:visited{
     color: #3E8C84;
+    text-decoration: none;
 }
 
 .nav-bar ul {
