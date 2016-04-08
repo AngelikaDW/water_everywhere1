@@ -32,6 +32,7 @@ padding: 0;
     flex-direction: row;
     background-color: #3E423A;
     position: fixed;
+    z-index: 999;
 }
 
 .left-section{
@@ -125,7 +126,6 @@ h4{
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 500;
     }
 
 li {
