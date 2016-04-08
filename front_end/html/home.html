@@ -4,38 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <title>Home</title>
-    <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
-    <script src="http://google-maps-utility-library-v3.googlecode.com/svn/trunk/markerclusterer/src/markerclusterer_compiled.js"></script>
-    <script src="../../back_end/where_water.js"></script>
-    <script>
-
-      function initialize() {
-        /*alert("To see the position of a marker, hover over the marker but don't click.");*/
-        var myLatlng = new google.maps.LatLng(52.373012, 4.892618)
-        var mapOptions = {
-          zoom: 12,
-          center: myLatlng,
-          mapTypeId: google.maps.MapTypeId.ROADMAP
-        }
-        var map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
-
-        i = 0;
-        var markers = [];
-        for ( pos in myData ) {
-            i = i + 1;
-            var row = myData[pos];
-            window.console && console.log(row);
-            // if ( i < 3 ) { alert(row); }
-            var newLatlng = new google.maps.LatLng(row[0], row[1]);
-            var marker = new google.maps.Marker({
-                position: newLatlng,
-                map: map,
-                title: row[2]
-            });
-            markers.push(marker);
-        }
-      }
-    </script>
+    <meta HTTP-EQUIV="REFRESH" content="0; url=http://drinkingfountains.azurewebsites.net/">
     <link rel="icon" type="image/png" href="../imgs/tap_drop.png"/>
     <link rel="stylesheet" href="../css/stylesheet.css"/>
 </head>
@@ -55,37 +24,18 @@
     <div class="full-canvas">
         <h1> Fresh Water Drinking Fountains in Amsterdam</h1>
         <div class="left-section">
-            <img src="../imgs/water_water_everywhere1.png" alt="visual of water water everywhere" title="Water Water everywhere" class="logo">
-           
-            <img src="../imgs/happertje.jpg" alt="image of spray tap" title="spray tab" class="img-fountain">
             
-            <img src="../imgs/tap_basic.jpg" alt="image of basic water tap" title="basic tap" class="img-fountain">
-
-            <img src="../imgs/delta_tap.jpg" alt="image of delta water tap" title="delta tap" class="img-fountain">
         </div>
 
         <div class="right-section">
             <div class="text">
                 <hr>
                 <h2>Fresh water to tap in Amsterdam</h2>
-                <hr>
-                <p>Buying bottled water is lame and bad for the environment, but staying hydrated and refreshed is cool and good for you. </p>
-                <p> Bottled water is sold in stunning numbers: in Amsterdam <strong>21.7m liters </strong>water was sold in bottles in 2014  <br> <a href="http://www.parool.nl/binnenland/verkoop-flesjes-piekt-op-hotspots~a4253221/" target="_blank">(Source: AMS Instituut voor stadsonderzoek)</a> </p>
-                <p>Luckily there are public water taps all around Amsterdam (courtesy of <a href="http://waternet.nl" target="_blank">Waternet</a> and <a href="http://join-the-pipe.org/nl" target="_blank">Join the Pipe</a> ) offering fresh sweet water to fill your bottle and or to sip from. </p>
-                <p>In case you doubt, if the water is safe to drink: the quality of Dutch drinking water was top rated by a comparative reserach published in <a href="http://science.sciencemag.org/content/351/6276/912" target="_blank">Science Magazine 2016/02 Vol. 351</a>! </p>
-                <p>As no chlorine is used, the water actually tastes sweet. If you want to find out how this is achieved, vist <a href="https://www.e-nemo.nl/en/exhibitions/water-world/" target="_blank">Science Center Nemo</a> where an interactive display explains all the steps.</p>
-                <p> The drinkwater fountains tend to blend so well into the city, you might have trouble finding them.</p>
-                <p>So this site gives you an overview where to find the nearest water fountain to quench your thirst.</p>
+                <h4>If you are not redirected within 10 seconds, please click on <a href="http://drinkingfountains.azurewebsites.net/" target="_blank">Drinking Fountains</a> </h4>
+                              
                 <h3>Keep hydrated and happily exploring Amsterdam!</h3>
-                <hr>
-            </div>
-
-            <div id="map_canvas" style = "height:600px"></div>
-            <div class="map-text">
-                <p>Fresh water drinking fountains around Amsterdam. <br> Using Python as learned at:<a href="http://www.pythonlearn.com">www.pythonlearn.com</a>.</p>
             </div>
         </div>
-
     </div>   
 </main>
 </body>
