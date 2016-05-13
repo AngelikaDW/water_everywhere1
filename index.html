@@ -1,109 +1,141 @@
-<!DOCTYPE html>
-<html lang='en'>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
-    <!-- ALl new code to display thumbnail on social media sites, ends with the 4th meta tag -->
-    <meta property="og:site_name" content="Drinking Fountains">
-    <meta property="og:title" content="Drinking Fountains Amsterdam" />
-    <meta property="og:description" content="Amsterdam" />
-    <meta property="og:image" itemprop="image" content="http://drinkingfountains.azurewebsites.net/front_end/imgs/water_water_everywhere1.png" />
-    
+<DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="Drinking Fountains Amsterdam">
+    <meta name="author" content="AngelikaDW">
+    <link rel="icon" type="image/png" href="front_end/imgs/icons/blue/nature.png"/>
 
-    <title>Home</title>
-    <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
-    <script src="http://google-maps-utility-library-v3.googlecode.com/svn/trunk/markerclusterer/src/markerclusterer_compiled.js"></script>
-    <script src="back_end/where_water.js"></script>
-    <script>
+    <title>Drinking Fountains Amsterdam</title>
 
-      function initialize() {
-        /*alert("To see the position of a marker, hover over the marker but don't click.");*/
-        var myLatlng = new google.maps.LatLng(52.373012, 4.892618)
-        var mapOptions = {
-          zoom: 12,
-          center: myLatlng,
-          mapTypeId: google.maps.MapTypeId.ROADMAP
-        }
-        var map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
-        i = 0;
-        var markers = [];
-        for ( pos in myData ) {
-            i = i + 1;
-            var row = myData[pos];
-            window.console && console.log(row);
-            // if ( i < 3 ) { alert(row); }
-            var newLatlng = new google.maps.LatLng(row[0], row[1]);
-            var marker = new google.maps.Marker({
-                position: newLatlng,
-                map: map,
-                title: row[2]
-            });
-            markers.push(marker);
-        }
-      }
-    </script>
-    <link rel="icon" type="image/png" href="front_end/imgs/tap_drop.png"/>
-    <link rel="stylesheet" href="front_end/css/stylesheet.css"/>
-</head>
-<body onload="initialize()">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
 
-    <header>
-    <div class="nav-bar">
-    <ul>
-      <li><a class="active" href="index.html">Drinking Fountains Amsterdam</a></li>
-      <!-- <li><a href="front_end/html/locations.html">Locations</a></li> -->
-      <li><a href="front_end/html/blog.html">Blog</a></li>
-      <li><a href="front_end/html/contact.html">About</a></li>
-    </ul>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+    <!-- Custom styles for this template -->
+    <link href="front_end/css/stylesheet.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  <!-- Adding Roboto Font to load -->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  </head>
+
+  <body>
+    <a name="back-top"></a>
+    <nav class="navbar navbar-default navbar-static">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#back-top">
+            <img alt="Brand" src="front_end/imgs/water_water_everywhere1.png" style="max-height:50px"></a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#searcher-icon"><img alt="search water fountain" src="front_end/imgs/icons/blue/searcher.png"></a></li>
+            <li><a href="#water-safe-to-drink-icon"><img alt="water safe to drink" src="front_end/imgs/icons/blue/drink.png"></a></li>
+            <li><a href="#quit-bottles-icon"><img alt="quit bottled water" src="front_end/imgs/icons/blue/food.png"></a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+    <a name="searcher-icon"></a>
+    <div id="main">
+      <div id="intro-text">
+
+        <h1>Find the nearest drinking fountain</h1>
+        <p>Enjoy clean and safe drinking water to quench your thirst and fill up your bottle.</p>
+      </div>
+      <div id ="search-section">
+        <input id="pac-input" class="controls" type="text" placeholder="Location">
+        <button id="showMap">Search</button>
+      </div>
+      <div id="map" style="visibility:hidden"></div>
+    </div>  <!--/ Closing main div -->
+<!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+    <div class="container marketing">
+      <!-- START THE FEATURETTES -->
+      <a name="water-safe-to-drink-icon"></a>
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">Tap water is safe to drink and tastes sweet!</h2>
+          <p class="lead">The Netherlands and Amsterdam has the safest and cleanest tap water in Europe.<br>In case you doubt: the quality of Dutch drinking water was top rated by a comparative reserach published in <a href="http://science.sciencemag.org/content/351/6276/912" target="_blank">Science Magazine 2016/02 Vol. 351</a>! As no chlorine is used, the water actually tastes sweet. If you want to find out how this is achieved, vist <a href="https://www.e-nemo.nl/en/exhibitions/water-world/" target="_blank">Science Center Nemo</a> where an interactive display explains all the steps.</p>
+        </div>
+        <div class="col-md-5">
+          <img class="featurette-image img-responsive center-block"src="front_end/imgs/icons/white/drink.png" alt="Icon glass with waterdrop">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+      <a name="quit-bottles-icon"></a>
+      <div class="row featurette">
+        <div class="col-md-7 col-md-push-5">
+          <h2 class="featurette-heading">Quit buying bottled water</h2>
+          <p class="lead">There are drinking fountains all around Amsterdam. Drinking water to stay hydrated and refreshed is cool and good for you but buying bottled water is lame and bad for the environment. Bottled water is sold in stunning numbers: in Amsterdam <strong>21.7m liters </strong>water was sold in bottles in 2014<br> <a href="http://www.parool.nl/binnenland/verkoop-flesjes-piekt-op-hotspots~a4253221/" target="_blank">(Source: AMS Instituut voor stadsonderzoek)</a></p>
+        </div>
+        <div class="col-md-5 col-md-pull-7">
+          <img class="featurette-image img-responsive center-block" src="front_end/imgs/icons/white/food.png" alt="Icon plastic water bottle">
+        </div>
+      </div>
+      <hr class="featurette-divider">
+    </div> <!--/===============================
+    Closing marketing -->
+
+    <div id="footer">
+      <p>2016 by AngelikaDW - Icons designed by Freepick - Drinking fountains courtesy of <a href="http://waternet.nl" target="_blank">Waternet</a> and <a href="http://join-the-pipe.org/nl" target="_blank">Join the Pipe</a></p>
+      <!-- <ul>
+        <li>2016 by Angelika DW</li>
+        <li>icons designed by Freepik </li>
+        <li><a href="http://waternet.nl" target="_blank">Waternet</a></li>
+        <li>Drinking fountains courtesy of<a href="http://join-the-pipe.org/nl" target="_blank">Join the Pipe</a></li>
+      </ul> -->
     </div>
-    </header>
-<link itemprop="thumbnailUrl" href="http://drinkingfountains.azurewebsites.net/front_end/imgs/water_water_everywhere1.png"> 
-<span itemprop="thumbnail" itemscope itemtype="http://schema.org/ImageObject"> 
-  <link itemprop="url" href="http://drinkingfountains.azurewebsites.net/front_end/imgs/water_water_everywhere1.png"> 
-</span>
-<main>
-    <div class="full-canvas">
-        <h1> Fresh Water Drinking Fountains in Amsterdam</h1>
-        <div class="left-section">
-            <img src="front_end/imgs/water_water_everywhere1.png" alt="visual of water water everywhere" title="Water Water everywhere" class="logo">
-           
-            <img src="front_end/imgs/happertje.jpg" alt="image of spray tap" title="spray tab" class="img-fountain">
-            
-            <img src="front_end/imgs/tap_basic.jpg" alt="image of basic water tap" title="basic tap" class="img-fountain">
+    <script src="back_end/where_water.js"></script>
+    <script src="front_end/js/script.js"></script>
 
-            <img src="front_end/imgs/delta_tap.jpg" alt="image of delta water tap" title="delta tap" class="img-fountain">
-        </div>
 
-        <div class="right-section">
-            <h2>Fresh water to tap in Amsterdam</h2>
-            <div id="map_canvas" style = "height:600px"></div>
-            <div class="text">
-                <h4>Thirsty? How about some water?</h4>
-                <p>Drinking water to stay hydrated and refreshed is cool and good for you but buying bottled water is lame and bad for the environment. Bottled water is sold in stunning numbers: in Amsterdam <strong>21.7m liters </strong>water was sold in bottles in 2014  <br> <a href="http://www.parool.nl/binnenland/verkoop-flesjes-piekt-op-hotspots~a4253221/" target="_blank">(Source: AMS Instituut voor stadsonderzoek)</a> </p>
-                <h4>There is an alternative: Drinking Fountains</h4>
-                <p>Luckily there are public water taps all around Amsterdam (courtesy of <a href="http://waternet.nl" target="_blank">Waternet</a> and <a href="http://join-the-pipe.org/nl" target="_blank">Join the Pipe</a>) offering fresh sweet water to fill your bottle and or to sip from. </p>
-                <h4>Is tap water safe to drink?</h4>
-                <p>In case you doubt, if the water is safe to drink: the quality of Dutch drinking water was top rated by a comparative reserach published in <a href="http://science.sciencemag.org/content/351/6276/912" target="_blank">Science Magazine 2016/02 Vol. 351</a>! As no chlorine is used, the water actually tastes sweet. If you want to find out how this is achieved, vist <a href="https://www.e-nemo.nl/en/exhibitions/water-world/" target="_blank">Science Center Nemo</a> where an interactive display explains all the steps.</p>
-                <h4>Where is the nearest drinking fountain located?</h4>
-                <p> The drinkwater fountains tend to blend so well into the city, you might have trouble finding them. So this site gives you an overview where to find the nearest water fountain to quench your thirst.</p>
-                <h4>There are different types of water fountains:</h4>
-                <ul>
-                    <li><p><strong>"Happertjes"</strong> A basic premise  sip from: just a continuous stream of water that shoots up in the air and falls back in its own basin. </p></li>
-                    <li><p><strong>"Simple Tap"</strong> a tube like stand-alone fixture, with white, black or silver finishing. Push the button to fill your bottle.</p></li>
-                    <li><p><strong>"Delta-Tap"</strong> block shaped fixtures made of stainless steel. Push the button at the top  activate the water flow. Watch out: water flow is quite strong!</p></li>              
-                </ul>
-                <p>Locations are approximate.If you come across a drinking fountain, which is not registered on the map, please drop me a message and I will add it to the list!</p>
-                <h3>Keep hydrated and happily exploring Amsterdam!</h3>
-                <hr>
-            </div>
-
-            
-            <!-- <div class="map-text">
-                <p>Fresh water drinking fountains around Amsterdam. Using Python as learned at:<a href="http://www.pythonlearn.com">www.pythonlearn.com</a>.</p>
-            </div> -->
-        </div>
-
-    </div>   
-</main>
-</body>
+    <!-- API for Autocomplete -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBAQxYVUqXtJkWRaDkDHfuSnrekMbap_GQ&libraries=places&callback=initAutocomplete"
+         async defer></script>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+<!--     // js scripts here
+      // note jquery tag has to go before boostrap -->
+      <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+      <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+  </body>
+</html>

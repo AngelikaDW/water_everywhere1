@@ -1,4 +1,5 @@
 myData = [
+[52.374255, 4.883504, 'Westermarkt, Amsterdam, Netherlands'],
 [52.3702157,4.8951679, 'Amsterdam, Netherlands'],
 [52.3545012,4.799676, 'Wolbrantskerkweg 245, 1069 CW Amsterdam, Netherlands'],
 [52.3918612,4.9592149, 'Volendammerweg 160, 1024 Amsterdam, Netherlands'],
